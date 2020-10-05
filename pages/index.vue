@@ -1,9 +1,11 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
-        velas_code
-      </h1>
+      <MouseInteractiveText>
+        <h1 class="title">
+          velas_code
+        </h1>
+      </MouseInteractiveText>
     </div>
   </div>
 </template>
