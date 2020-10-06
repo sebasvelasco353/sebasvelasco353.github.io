@@ -24,9 +24,9 @@ export default {}
             max-width: 720px;
         }
     }
-    @media (min-width: 576px){
+    @media (max-width: 767px){
         .container {
-            max-width: 540px;
+            max-width: 100%;
         }
     }
     .container{
@@ -37,5 +37,6 @@ export default {}
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
+        min-height: 95vh;
     }
 </style>

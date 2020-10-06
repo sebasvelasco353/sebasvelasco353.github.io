@@ -5,11 +5,6 @@
           <li><nuxt-link class="nav_link" to="/">Home</nuxt-link></li>
           <li><nuxt-link class="nav_link" to="/about">About</nuxt-link></li>
       </ul>
-      <ul class="nav_social">
-          <li><a class="nav_link" href="https://www.instagram.com/velas_code">Instagram</a></li>
-          <li><a class="nav_link" href="https://www.github.com/sebasvelasco353">Github</a></li>
-          <li><a class="nav_link" href="https://www.youtube.com/channel/UC1H83UvGm0AznLAZwsYPoNA">Youtube</a></li>
-      </ul>
   </nav>
 </template>
 
@@ -21,11 +16,16 @@ export default {}
     nav{
         display: flex;
         flex-direction: row;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
         font-size: 1.3rem;
         justify-content: space-evenly;
         align-items: center;
         box-sizing: border-box;
         height: 10vh;
+        z-index: 100000;
         .nav_logo{
             font-weight: bold;
             color: black;
@@ -64,5 +64,11 @@ export default {}
             font-weight: bold;
         }
     }
-
+    @media screen and (max-width: 800px) {
+        nav{
+            padding: 3vh 1vw;
+            height: auto;
+            flex-direction: column;
+        }
+    }
 </style>
