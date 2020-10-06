@@ -4,6 +4,7 @@
       <ul>
           <li><nuxt-link class="nav_link" to="/">Home</nuxt-link></li>
           <li><nuxt-link class="nav_link" to="/about">About</nuxt-link></li>
+          <li><nuxt-link class="nav_link" to="/blog">Blog</nuxt-link></li>
       </ul>
   </nav>
 </template>
@@ -44,6 +45,7 @@ export default {}
                     color: black;
                     text-decoration: none;
                     display: inline-block;
+                    text-transform: uppercase;
                 }
             }
         }

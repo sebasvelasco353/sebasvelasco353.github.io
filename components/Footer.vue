@@ -26,6 +26,9 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    background-color: rgb(20, 30, 48);
     ul{
         display: flex;
         flex-direction: row;
@@ -34,7 +37,7 @@ footer{
             margin: 0 15px;
             list-style-type:none;
             a{
-                color: black;
+                color: white;
                 text-decoration: none;
                 display: inline-block;
             }
@@ -45,13 +48,29 @@ footer{
         display: block;
         width: 0;
         height: 2px;
-        background-color: black;
+        background-color: white;
         transition: width .3s;
     }
     .nav_link:hover::after{
         width: 100%;
         transition: width;
         transition: width .3s;
+    }
+}
+@media screen and (max-width: 800px) {
+    footer{
+        padding: 3vh 1vw;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        height: 15vh;
+        ul{
+          display: flex;
+          flex-direction: row;
+          padding: 0;
+          text-align: center;
+          justify-content: center;
+        }
     }
 }
 </style>

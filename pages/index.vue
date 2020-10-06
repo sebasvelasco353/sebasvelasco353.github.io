@@ -46,4 +46,9 @@ export default {
       }
     }
   }
+  @media (max-width: 800px){
+    .parent {
+      height: 85vh !important;
+    }
+  }
 </style>
