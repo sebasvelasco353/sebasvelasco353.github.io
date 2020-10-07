@@ -1,6 +1,5 @@
 <template>
   <Container>
-    <nuxt-link class="index_link" to="/blog_index" exact>Blog</nuxt-link>
     <img
       :src="require(`~/assets/images/${article.img}`)"
       :alt="article.alt"
@@ -20,6 +19,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.index_link{
-}
 </style>
