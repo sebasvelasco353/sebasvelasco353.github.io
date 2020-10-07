@@ -24,7 +24,7 @@ export default {}
 
 <style lang="scss" scoped>
 .about_text{
-    max-width: 50vw;
+    max-width: 40vw;
     margin: 0 auto;
     padding: 30px;
     box-sizing: border-box;
