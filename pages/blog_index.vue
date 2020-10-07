@@ -3,7 +3,7 @@
     <h1>Blog Posts</h1>
     <ul>
       <li v-for="article in articles" :key="article.slug">
-          <p>{{ article.title }}</p>
+          <nuxt-link class="nav_link" :to="`blog/${article.slug}`" exact>{{ article.title }}</nuxt-link>
       </li>
     </ul>
   </Container>
@@ -16,6 +16,7 @@ export default {
       .only(['title', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'asc')
       .fetch()
+    console.log(articles)
     return {
       articles
     }
