@@ -1,11 +1,35 @@
 <template>
   <nav>
-      <span class="nav_logo">Velas_Code</span>
-      <ul>
-          <li><nuxt-link class="nav_link" to="/" exact>Home</nuxt-link></li>
-          <li><nuxt-link class="nav_link" to="/about" exact>About</nuxt-link></li>
-          <li><nuxt-link class="nav_link" to="/blog_index" exact>Blog</nuxt-link></li>
-      </ul>
+    <span class="nav_logo">Velas_Code</span>
+    <ul>
+      <li>
+        <nuxt-link
+          class="nav_link"
+          to="/"
+          exact
+        >
+          Home
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link
+          class="nav_link"
+          to="/about"
+          exact
+        >
+          About
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link
+          class="nav_link"
+          to="/blog_index"
+          exact
+        >
+          Blog
+        </nuxt-link>
+      </li>
+    </ul>
   </nav>
 </template>
 

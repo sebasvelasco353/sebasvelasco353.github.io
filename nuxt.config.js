@@ -6,7 +6,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/velas_code/'
+    base: '/'
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
