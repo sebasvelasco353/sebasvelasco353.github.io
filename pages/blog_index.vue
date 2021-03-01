@@ -5,13 +5,13 @@
     </section>
     <aside>
       <ul class="post_link-container">
-        <li class="post_link" v-for="article in articles" :key="article.slug">
+        <li v-for="article in articles" :key="article.slug" class="post_link">
           <nuxt-link class="nav_link" :to="`blog/${article.slug}`" exact>
             <div class="post_img">
               <img
                 :src="require(`~/assets/images/${article.img}`)"
                 :alt="article.alt"
-              />
+              >
             </div>
             <h3>{{ article.title }}</h3>
             <p>{{ article.description }}</p>
@@ -33,9 +33,6 @@ export default {
     return {
       articles
     }
-  },
-  data(){
-    
   }
 }
 </script>

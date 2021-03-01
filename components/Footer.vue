@@ -2,9 +2,9 @@
   <footer>
     <p>Made with &#128151; by <b>Velas_Code</b> {{ year }} </p>
     <ul class="nav_social">
-        <li><a class="nav_link" href="https://www.instagram.com/velas_code">Instagram</a></li>
-        <li><a class="nav_link" href="https://www.github.com/sebasvelasco353">Github</a></li>
-        <li><a class="nav_link" href="https://www.youtube.com/channel/UC1H83UvGm0AznLAZwsYPoNA">Youtube</a></li>
+      <li><a class="nav_link" href="https://www.instagram.com/velas_code">Instagram</a></li>
+      <li><a class="nav_link" href="https://www.github.com/sebasvelasco353">Github</a></li>
+      <li><a class="nav_link" href="https://www.twitch.tv/velas_code">Twitch</a></li>
     </ul>
   </footer>
 </template>

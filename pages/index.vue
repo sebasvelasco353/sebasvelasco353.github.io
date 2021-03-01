@@ -2,10 +2,10 @@
   <div class="container">
     <kinesis-container class="parent">
       <kinesis-element type="depth" class="child" :strength="30">
-          <h1 class="title">
-            velas_code
-          </h1>
-          <p>Web developer && food enthusiast</p>
+        <h1 class="title">
+          velas_code
+        </h1>
+        <p>Web developer && food enthusiast</p>
       </kinesis-element>
     </kinesis-container>
   </div>

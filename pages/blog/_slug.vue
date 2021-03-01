@@ -3,7 +3,7 @@
     <img
       :src="require(`~/assets/images/${article.img}`)"
       :alt="article.alt"
-    />
+    >
     <nuxt-content :document="article" />
   </Container>
 </template>
