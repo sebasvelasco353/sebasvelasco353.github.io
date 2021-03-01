@@ -1,10 +1,10 @@
 <template>
-  <nav class="flex flex-col justify-between px-10 py-6 text-center sm:flex-row">
+  <nav class="flex flex-col justify-between px-10 py-6 mx-auto my-0 text-center sm:flex-row max-w-screen-lg">
     <span class="text-lg font-extrabold nav_logo">Velas_Code</span>
     <ul class="flex justify-between text-center">
-      <li class="mx-8"><nuxt-link class="nav_link" to="/" exact>Home</nuxt-link></li>
-      <li class="mx-8"><nuxt-link class="nav_link" to="/about" exact>About</nuxt-link></li>
-      <li class="mx-8"><nuxt-link class="nav_link" to="/blog_index" exact>Blog</nuxt-link></li>
+      <li class="mx-4"><nuxt-link class="nav_link" to="/" exact>Home</nuxt-link></li>
+      <li class="mx-4"><nuxt-link class="nav_link" to="/about" exact>About</nuxt-link></li>
+      <li class="mx-4"><nuxt-link class="nav_link" to="/blog_index" exact>Blog</nuxt-link></li>
     </ul>
   </nav>
 </template>
