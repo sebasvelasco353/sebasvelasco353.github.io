@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <h1>holi</h1>
-    <p>que se dice</p>
   </div>
 </template>
 
@@ -13,7 +11,8 @@ export default Vue.extend({
 </script>
 
 <style>
-h1 {
-  @apply font-serif font-bold text-4xl;
+.container {
+  /* sizing */
+  @apply flex-1;
 }
 </style>
