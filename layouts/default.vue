@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss" scoped>
 #application {
   @apply flex flex-col;
   @apply h-screen;
