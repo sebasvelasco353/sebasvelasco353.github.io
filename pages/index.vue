@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <p>holis!!</p>
   </div>
 </template>
 
@@ -10,9 +11,9 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .container {
   /* sizing */
-  @apply flex-1;
+  @apply flex-1 pt-16;
 }
 </style>

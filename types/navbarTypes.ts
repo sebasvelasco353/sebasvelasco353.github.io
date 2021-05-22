@@ -1,4 +1,5 @@
 export interface Navbar {
-    menuText: string
+    menuText: string,
+    currentPage: string
 }
   

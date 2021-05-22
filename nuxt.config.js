@@ -2,6 +2,12 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  // open port 8000 for local network testing
+  server: {     
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
+  },
+  
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 

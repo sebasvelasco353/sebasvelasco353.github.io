@@ -8,10 +8,10 @@
     </div>
     <nav class="navbar__links">
         <ul>
-            <li class="navbar__link">Home</li>
-            <li class="navbar__link">About me</li>
-            <li class="navbar__link">Work</li>
-            <li class="navbar__link">Blog</li>
+            <li class="navbar__link" :class="{ active: currentPage === 'index' }"><span>Home</span></li>
+            <li class="navbar__link" :class="{ active: currentPage === 'about' }"><span>About</span></li>
+            <li class="navbar__link"><span>Work</span></li>
+            <li class="navbar__link"><span>Blog</span></li>
         </ul>
     </nav>
 </header>
@@ -26,21 +26,30 @@ export default Vue.extend({
     name: 'Navbar',
     data() {
         return {
-            menuText: 'open' as Navbar['menuText']
+            menuText: 'open' as Navbar['menuText'],
+            currentPage: '' as Navbar['currentPage']
         };
     },
     methods: {
         changeMenuVisibility(): void {
             if (this.menuText === 'open') {
                 this.menuText = 'close';
-                gsap.to('.navbar__links', {
+                gsap.to('nav', {
                     duration: 1,
                     ease: 'power2.out',
                     yPercent: 120
                 });
+                gsap.from('.navbar__link', {
+                    duration: 1.5,
+                    ease: 'power2.out',
+                    xPercent: -50,
+                    opacity: 0,
+                    delay: 0.5,
+                    stagger: 0.2,
+                });
             } else {
                 this.menuText = 'open';
-                gsap.to('.navbar__links', {
+                gsap.to('nav', {
                     duration: 1,
                     ease: 'power2.out',
                     yPercent: -120
@@ -49,6 +58,8 @@ export default Vue.extend({
         }
     },
     mounted(): void {
+        console.log(this.$route.name);
+        this.currentPage = String(this.$route.name);
     }
 })
 </script>
@@ -80,7 +91,7 @@ h1 > span {
 }
 .navbar__button {
 }
-.navbar__links {
+nav {
     /* position */
     transform: translateY(-120%);
     @apply absolute top-0 left-0 z-40;
@@ -90,5 +101,20 @@ h1 > span {
     @apply bg-black;
     /* display */
     @apply flex content-center justify-center items-center;
+}
+.navbar__link {
+    /* spacing */
+    @apply my-3;
+}
+.navbar__link > span {
+    /* font stuff */
+    @apply text-6xl text-black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+.active > span{
+    /* font stuff */
+    @apply text-6xl text-white;
+    -webkit-text-stroke-width: 0px;
 }
 </style>
