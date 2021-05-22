@@ -8,10 +8,10 @@
     </div>
     <nav class="navbar__links">
         <ul>
-            <li class="navbar__link" :class="{ active: currentPage === 'index' }"><span>Home</span></li>
-            <li class="navbar__link" :class="{ active: currentPage === 'about' }"><span>About</span></li>
-            <li class="navbar__link"><span>Work</span></li>
-            <li class="navbar__link"><span>Blog</span></li>
+            <li class="navbar__link" :class="{ active: currentPage === 'index' }"><a href="/">Home</a></li>
+            <li class="navbar__link" :class="{ active: currentPage === 'about' }"><a href="/about">About</a></li>
+            <li class="navbar__link"><a>Work</a></li>
+            <li class="navbar__link"><a>Blog</a></li>
         </ul>
     </nav>
 </header>
@@ -106,13 +106,13 @@ nav {
     /* spacing */
     @apply my-3;
 }
-.navbar__link > span {
+.navbar__link > a {
     /* font stuff */
     @apply text-6xl text-black;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 }
-.active > span{
+.active > a {
     /* font stuff */
     @apply text-6xl text-white;
     -webkit-text-stroke-width: 0px;
