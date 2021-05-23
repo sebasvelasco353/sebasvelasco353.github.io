@@ -8,16 +8,17 @@
     </div>
     <nav class="navbar__links">
         <ul>
-            <li class="navbar__link" :class="{ active: currentPage === 'index' }"><a href="/">Home</a></li>
-            <li class="navbar__link" :class="{ active: currentPage === 'about' }"><a href="/about">About</a></li>
-            <li class="navbar__link"><a>Work</a></li>
-            <li class="navbar__link"><a>Blog</a></li>
+            <li class="navbar__link" :class="{ active: activePage === 'index' }"><NuxtLink to="/">Home</NuxtLink></li>
+            <li class="navbar__link" :class="{ active: activePage === 'about' }"><NuxtLink to="/about">About</NuxtLink></li>
+            <li class="navbar__link" :class="{ active: activePage === 'work' }"><NuxtLink to="/work">Work</NuxtLink></li>
+            <li class="navbar__link" :class="{ active: activePage === 'blog' }"><NuxtLink to="/blog">Blog</NuxtLink></li>
         </ul>
     </nav>
 </header>
 </template>
 
 <script lang="ts">
+// TODO: add route watcher!
 import Vue from 'vue';
 import gsap from "gsap";
 import { Navbar } from '../types/navbarTypes';
@@ -27,7 +28,7 @@ export default Vue.extend({
     data() {
         return {
             menuText: 'open' as Navbar['menuText'],
-            currentPage: '' as Navbar['currentPage']
+            activePage: '' as Navbar['activePage']
         };
     },
     methods: {
@@ -55,11 +56,18 @@ export default Vue.extend({
                     yPercent: -120
                 });
             }
+        },
+        setActivePage(): void {
+            this.activePage = String(this.$route.name);
+        }
+    },
+    watch: {
+        $route(to, from){
+            this.setActivePage();
         }
     },
     mounted(): void {
-        console.log(this.$route.name);
-        this.currentPage = String(this.$route.name);
+        this.setActivePage();
     }
 })
 </script>

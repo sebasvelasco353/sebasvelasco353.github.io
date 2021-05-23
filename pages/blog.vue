@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p>!!</p>
+    <p>holis!</p>
   </div>
 </template>
 
@@ -17,3 +17,4 @@ export default Vue.extend({
   @apply flex-1 pt-16;
 }
 </style>
+
