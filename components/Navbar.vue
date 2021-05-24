@@ -6,6 +6,7 @@
             <span>{{ menuText }}</span>
         </div>
     </div>
+    <div class="navbar__color"></div>
     <nav class="navbar__links">
         <ul>
             <li class="navbar__link" :class="{ active: activePage === 'index' }"><NuxtLink to="/">Home</NuxtLink></li>
@@ -18,7 +19,6 @@
 </template>
 
 <script lang="ts">
-// TODO: add route watcher!
 import Vue from 'vue';
 import gsap from "gsap";
 import { Navbar } from '../types/navbarTypes';
@@ -35,15 +35,21 @@ export default Vue.extend({
         changeMenuVisibility(): void {
             if (this.menuText === 'open') {
                 this.menuText = 'close';
-                gsap.to('nav', {
+                gsap.to('.navbar__color', {
                     duration: 1,
                     ease: 'power2.out',
                     yPercent: 120
                 });
+                gsap.to('nav', {
+                    duration: 1,
+                    ease: 'power2.out',
+                    yPercent: 120,
+                    delay: 0.1
+                });
                 gsap.from('.navbar__link', {
                     duration: 1.5,
                     ease: 'power2.out',
-                    xPercent: -50,
+                    yPercent: -50,
                     opacity: 0,
                     delay: 0.5,
                     stagger: 0.2,
@@ -53,7 +59,13 @@ export default Vue.extend({
                 gsap.to('nav', {
                     duration: 1,
                     ease: 'power2.out',
-                    yPercent: -120
+                    yPercent: -120,
+                });
+                gsap.to('.navbar__color', {
+                    duration: 1,
+                    ease: 'power2.out',
+                    yPercent: -120,
+                    delay: .1
                 });
             }
         },
@@ -64,6 +76,9 @@ export default Vue.extend({
     watch: {
         $route(to, from){
             this.setActivePage();
+            setTimeout(() => {
+                this.changeMenuVisibility();
+            }, 250);
         }
     },
     mounted(): void {
@@ -109,6 +124,15 @@ nav {
     @apply bg-black;
     /* display */
     @apply flex content-center justify-center items-center;
+}
+.navbar__color {
+    /* position */
+    transform: translateY(-120%);
+    @apply absolute top-0 left-0 z-40;
+    /* Sizing */
+    @apply w-full h-screen;
+    /* Colors */
+    @apply bg-yellow;
 }
 .navbar__link {
     /* spacing */

@@ -17,6 +17,12 @@ module.exports = {
       spacing: {
       },
       borderRadius: {
+      },
+      grayscale: {
+        50: '50%'
+      },
+      saturate: {
+        50: '50%'
       }
     }
   },
