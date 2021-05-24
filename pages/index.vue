@@ -26,7 +26,8 @@ export default Vue.extend({
   },
   mounted():void {
     this.$nextTick(() => {
-      let itemW = this.$refs.marquee__element.clientWidth;
+      let element:any = this.$refs.marquee__element; // TODO: find a better not so shady solution to this.
+      let itemW = element.clientWidth;
       let allW = itemW * 3;
       gsap.to('.marquee__element',{
         duration: 10,      
