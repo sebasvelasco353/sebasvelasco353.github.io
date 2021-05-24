@@ -21,7 +21,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import gsap from "gsap";
-import { Navbar } from '../types/navbarTypes';
+import { Navbar } from '~/types';
 
 export default Vue.extend({
     name: 'Navbar',
@@ -94,11 +94,14 @@ body {
 </style>
 
 <style lang="postcss" scoped>
+header {
+    @apply z-50;
+}
 .navbar {
     /* sizing */
     @apply w-full h-16 px-4;
     /* positioning */
-    @apply absolute top-0 left-0 z-50;
+    @apply absolute top-0 left-0 z-40;
     /* shadow */
     @apply shadow;
     /* Colors */
@@ -117,7 +120,7 @@ h1 > span {
 nav {
     /* position */
     transform: translateY(-120%);
-    @apply absolute top-0 left-0 z-40;
+    @apply absolute top-0 left-0 z-30;
     /* Sizing */
     @apply w-full h-screen;
     /* Colors */
@@ -128,7 +131,7 @@ nav {
 .navbar__color {
     /* position */
     transform: translateY(-120%);
-    @apply absolute top-0 left-0 z-40;
+    @apply absolute top-0 left-0 z-30;
     /* Sizing */
     @apply w-full h-screen;
     /* Colors */
