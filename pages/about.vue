@@ -35,7 +35,7 @@ export default Vue.extend({
   /* sizing */
   @apply flex-1 pt-16;
   /* overflow */
-  @apply overflow-scroll;
+  @apply overflow-scroll overflow-x-hidden;
   /* sizing */
   @apply w-full px-4 py-24;
   /* shadow */
