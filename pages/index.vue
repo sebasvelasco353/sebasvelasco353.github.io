@@ -70,8 +70,8 @@ export default Vue.extend({
   @apply font-light;
 }
 img {
-  /* filters */
-  @apply filter grayscale-50 saturate-50;
+  /* position */
+  @apply relative;
   /* size */
   @apply h-5/6;
 }
