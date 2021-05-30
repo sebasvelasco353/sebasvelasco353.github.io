@@ -45,7 +45,7 @@ export default Vue.extend({
 }
 img {
   /* spacing */
-  @apply mb-4;
+  @apply mb-4 w-full;
 }
 p {
   /* spacing */
