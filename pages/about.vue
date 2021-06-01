@@ -1,6 +1,6 @@
 <template>
   <div class="container"> 
-    <img src="~/assets/images/velascode_picture.png" alt="Sebastian Velasco." />
+    <img class="picture" src="~/assets/images/velascode_picture.png" alt="Sebastian Velasco." />
     <p>
       Hello I’m Sebastian Velasco, a Web developer from Cali, Colombia and based in that same city.
     </p>

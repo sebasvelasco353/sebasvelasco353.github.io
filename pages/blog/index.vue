@@ -23,10 +23,17 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 
 export default Vue.extend({
-})
+  name: 'blog',
+  data() {
+    return {
+    }
+  },
+  async asyncData() {
+  }
+});
 </script>
 
 <style lang="postcss" scoped>

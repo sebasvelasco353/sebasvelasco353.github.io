@@ -3,3 +3,7 @@
     /* border: 1px solid red; */
     @apply box-border;
 }
+.container {
+    /* text */
+    @apply font-mono;
+}

@@ -49,8 +49,6 @@ export default Vue.extend({
   @apply flex-1 pt-16 overflow-hidden;
   /* positioning */
   @apply flex flex-col justify-center items-center content-center;
-  /* text */
-  @apply font-mono; 
 }
 .container__center {
   /* positioning and alignment */
